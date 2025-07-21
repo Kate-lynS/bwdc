@@ -8,7 +8,11 @@
   import DisappearingDuckExample from "./sections/DisappearingDuckExample.svelte";
   import IntersectionObserverSectionCard from "./sections/IntersectionObserverSectionCard.svelte";
   import IntersectionObserverListExample from "./sections/IntersectionObserverListExample.svelte";
+   import ScatterChart from './ScatterChart.svelte';
 </script>
+
+
+<ScatterChart />
 
 <main>
   <TitleSection />
