@@ -20,3 +20,5 @@ Run `npm install` and then `npm run dev` to spin up the project locally. Then, s
 
 ## Credit
 Repo created using vite (`npm create vite@6`)
+Flower Image from https://www.pinterest.com/pin/722616702695944311/
+equality image: https://www.pinterest.com/pin/129408189286207725/

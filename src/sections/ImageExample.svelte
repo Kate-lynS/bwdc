@@ -6,7 +6,7 @@
 <div>
     <Scroller layout="right">
         {#snippet sticky()}
-            <img class="duck-img" src="duck.png" alt="KWK rubber duck!" />
+            <img class="flower-img" src="flower.png" alt="figure with flowers!" />
         {/snippet}
 
         {#snippet scrolly()}
@@ -23,7 +23,7 @@
 </div>
 
 <style>
-    .duck-img {
+    .flower-img {
         width: 25%;
         margin: 0px auto;
     }

@@ -28,69 +28,26 @@
     };
 </script>
 
-<div>
-    <Scroller layout="left">
-        {#snippet sticky()}
-            <div>
-                <p>
-                    This section shows how to use the
-                    <code>{"<ObservedArticleText>"} component.</code>
-                </p>
-                <p>
-                    The <code>{"<ObservedArticleText>"}</code>
-                    component is very similar to the
-                    <code>{"<ArticleText>"}</code>
-                    component, but it also creates and uses an
-                    <a
-                        href="https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API"
-                    >
-                        Intersection Observer
-                    </a>.
-                </p>
-                <p>
-                    That Intersection Observer object "watches" the element. We
-                    can use it to answer the question:
-                    <br /><br />
-                    <strong
-                        >"Is this element currently visible in the browser
-                        window?"</strong
-                    >
-                    <br /><br />
-                    <strong> How does it work?</strong> When some specified percentage of
-                    the element crosses into or out of the viewport of this
-                    browser window, a
-                    <strong> callback function </strong> is called.
-                </p>
-                <p>
-                    A <strong>callback function</strong> is a function, which we
-                    define, that will get called when a specific event happens.
-                </p>
-                <p>
-                    We can define any behavior we want to in that callback
-                    function. In this case, we turn the background of the box a
-                    different color depending on whether the element is more or
-                    less than 90% visible.
-                </p>
-                <p>
-                    📝 <strong>Try it yourself!:</strong> Make a change so that
-                    the article text box changes color when <strong>50%</strong>
-                    of it is visible.
-                </p>
-            </div>
-        {/snippet}
+<Scroller layout="left">
+    <div slot="sticky">
+        <p>
+            While the scatterplot highlights a noticeable correlation between higher education levels and increased rates of health insurance among women of color, it's important to explore the why.
+            <br> Data rarely tells the full story on its own—many social, economic, and
+            structural factors shape these outcomes.
+        </p>
+    </div>
 
-        {#snippet scrolly()}
-            <ObservedArticleText {callback} {options}>
-                <code>{"<ObservedArticleText>"}</code> example #1
-            </ObservedArticleText>
+    <div slot="scrolly">
+        <ObservedArticleText {callback} {options}>
+            <p>Factor 1: Employment-based insurance access</p>
+        </ObservedArticleText>
 
-            <ObservedArticleText {callback} {options}>
-                <code>{"<ObservedArticleText>"}</code> example #2
-            </ObservedArticleText>
+        <ObservedArticleText {callback} {options}>
+            <p>Factor 2: Income levels and affordability of private plans</p>
+        </ObservedArticleText>
 
-            <ObservedArticleText {callback} {options}>
-                <code>{"<ObservedArticleText>"}</code> example #3
-            </ObservedArticleText>
-        {/snippet}
-    </Scroller>
-</div>
+        <ObservedArticleText {callback} {options}>
+            <p>Factor 3: Awareness and literacy about insurance options</p>
+        </ObservedArticleText>
+    </div>
+</Scroller>

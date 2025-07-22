@@ -1,16 +1,14 @@
 <script>
-    // `layout` can be either "right" or "left"
-    // `sticky` and `scrolly` are the snippets passed in (see one of the examples)
-    let { layout, sticky, scrolly } = $props(); 
+    export let layout = "left";
 </script>
 
 <div class="wrapper {layout}">
     <div class="sticky">
-        {@render sticky()}
+        <slot name="sticky" />
     </div>
 
     <div class="scrolly">
-        {@render scrolly()}
+        <slot name="scrolly" />
     </div>
 </div>
 

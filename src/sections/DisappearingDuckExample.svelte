@@ -57,8 +57,8 @@
                 {#if duckIsVisible}
                     <img
                         class="duck-img"
-                        src="duck.png"
-                        alt="KWK rubber duck!"
+                        src="flower.png"
+                        alt="figure with flowers!"
                         in:fly={{ y: 200, duration: 2000 }}
                         out:fade
                     />
