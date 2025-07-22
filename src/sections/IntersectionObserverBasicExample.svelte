@@ -2,18 +2,15 @@
     import Scroller from "../lib/Scroller.svelte";
     import ObservedArticleText from "../lib/ObservedArticleText.svelte";
 
-    // this `options` object below is passed into the <ObservedArticleText>
-    // component, and from there it gets passed to the IntersectionObserver object w
-    // when it's created.
-    // the thresholds to fire the callback are 85% and 95%. in the callback function,
-    // we check whether the visible area is >= 90%. so, triggering the callback at
-    // 85% and 95% ensures we trigger the correct change in background color
-    // whether the element is being scrolled into the viewport or out of the viewport.
+    
     const options = {
         threshold: [0.85, 0.95],
     };
 
-    const callback = (entries, observer) => {
+    /** 
+     * @param {IntersectionObserverEntry[]} entries
+     */
+    const callback = (entries) => {
         entries.forEach((entry) => {
             const elem = entry.target;
 
